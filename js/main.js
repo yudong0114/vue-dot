@@ -1,11 +1,18 @@
 (function() {
   // 厳密なエラーチェック
   'use strict';
-  // 双方向バインディング
+  // Vue -> 双方向バインディング
+  // v-●● -> ディレクティブ
+
+
   let vm = new Vue({
     el: '#app',
     data: {
-      name: 'katsumi'
+      todos: [
+        'task1',
+        'task2',
+        'task3'
+      ]
     }
   })
 })();
