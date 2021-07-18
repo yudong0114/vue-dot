@@ -14,6 +14,11 @@ body {
 .container li {
     line-height: 1.5;
 }
+.container .command {
+    font-size: 12px;
+    cursor: pointer;
+    color: #00E;
+}
 .container input[type="text"] {
     padding: 2px;
 }
