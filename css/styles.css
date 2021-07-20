@@ -11,6 +11,11 @@ body {
     border-bottom: 1px solid #ddd;
     padding: 16px 0;
 }
+.container h1 .info {
+    color: #BBB;
+    font-size: 12px;
+    font-weight: normal;
+}
 .container ul {
     padding: 0;
     list-style: none;
