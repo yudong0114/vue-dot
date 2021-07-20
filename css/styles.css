@@ -16,6 +16,9 @@ body {
     font-size: 12px;
     font-weight: normal;
 }
+.container h1 button {
+    float: right;
+}
 .container ul {
     padding: 0;
     list-style: none;
