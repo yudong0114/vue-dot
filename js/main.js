@@ -9,20 +9,7 @@
     el: '#app',
     data: {
       newItem: '',
-      todos: [
-        {
-          title: 'task1',
-          isDone: false
-        },
-        {
-          title: 'task2',
-          isDone: false
-        },
-        {
-          title: 'task3',
-          isDone: true
-        }
-      ]
+      todos: []
     },
     // 配列の変化を検知(配列の値までチェックの場合、deep watcherを使う)
     watch: {
@@ -32,6 +19,9 @@
         },
         deep: true
       }
+    },
+    mounted: function() {
+      this.todos = JSON.parse(localStorage.getItem('todos')) || [];
     },
     methods: {
       addItem: function() {
