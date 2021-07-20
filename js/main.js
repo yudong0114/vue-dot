@@ -24,6 +24,15 @@
         }
       ]
     },
+    // 配列の変化を検知(配列の値までチェックの場合、deep watcherを使う)
+    watch: {
+      todos: {
+        handler: function() {
+          localStorage.setItem('todos', JSON.stringify(this.todos));
+        },
+        deep: true
+      }
+    },
     methods: {
       addItem: function() {
         let item = {
@@ -42,9 +51,6 @@
         if (!confirm('delete finished?')) {
           return;
         }
-        // this.todos = this.todos.filter(function(todo) {
-        //   return !todo.isDone;
-        // });
         this.todos = this.remaining;
       }
     },
