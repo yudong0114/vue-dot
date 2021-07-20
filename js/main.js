@@ -10,18 +10,7 @@
     data: {
       newItem: '',
       todos: [
-        {
-          title: 'task1',
-          isDone: false
-        },
-        {
-          title: 'task2',
-          isDone: false
-        },
-        {
-          title: 'task3',
-          isDone: true
-        }
+
       ]
     },
     methods: {
