@@ -22,6 +22,8 @@
     methods: {
       countUp: function() {
         this.count++;
+        // コンポーネントから親要素にデータを渡す
+        this.$emit('increment');
       }
     }
   })
@@ -30,6 +32,14 @@
     el: '#app',
     components: {
       'like-component': likeComponent
+    },
+    data: {
+      total: 0
+    },
+    methods: {
+      incrementTotal: function() {
+        this.total++;
+      }
     }
   })
 })();
